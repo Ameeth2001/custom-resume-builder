@@ -2,15 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const mysql = require('mysql');
-// for parsing application/json
-//router.use(bodyParser.json()); 
 
-// for parsing application/xwww-
-//app.use(bodyParser.urlencoded({ extended: true })); 
-//form-urlencoded
-
-// for parsing multipart/form-data
-//router.use(upload.array()); 
 
 
 /* GET users listing. */

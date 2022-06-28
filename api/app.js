@@ -27,6 +27,7 @@ var logincall = require('./routes/logincall');
 var UserDetails = require('./routes/userdetails');
 var postuserdetails = require('./postRoutes/postUserDetails');
 var uploadImage=require('./postRoutes/uploadimage');
+var getImage= require('./routes/getuserImage');
 
 var app = express();
 
@@ -68,7 +69,7 @@ app.use('/login',logincall);
 app.use('/userdetails', UserDetails);
 app.use('/postuserdetails',postuserdetails);
 app.use('/uploadImage',uploadImage);
-
+app.use('/getuserImage',getImage);
 
 
 // catch 404 and forward to error handler

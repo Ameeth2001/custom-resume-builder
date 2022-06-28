@@ -66,8 +66,8 @@ input.form-control:focus + label.form-label, input.form-control + label.has_cont
 }
 textarea.form-control:focus + label.form-label, textarea.form-control + label.has_content2{
   position: absolute;
-  margin-top: -73px;
-  margin-left: 10px;
+  margin-top: -82px;
+  margin-left: 15px;
   font-size: 12px;
   background: #fff;
   padding: 0 5px;
@@ -177,9 +177,8 @@ box-shadow: 2px 2px 5px #000;
 
 }
 .phoim{
-  height: auto;
-  width: inherit;
-  margin-top: -15px;
+  height: inherit;
+  margin-left:-16%;
 }
 .download_resume{
   background-color: #ccc;

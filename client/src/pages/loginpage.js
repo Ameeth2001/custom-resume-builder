@@ -31,8 +31,17 @@ submitForm() {
 	.then((res)=>{if(res==0){
 		alert("incorrect login credentials");
 	}else{
-		window.location = "dashboard";
+		sessionStorage.setItem("userid",res.userid);
+		sessionStorage.setItem("firstname",res.firstname);
+		sessionStorage.setItem("lastname",res.lastname);
+		//this gets userImage and stores in session
+		axios.post("http://localhost:9000/getuserImage",{id:res.userid})
+			.then((response)=>{
+			sessionStorage.setItem("userImage",response.data);
+			})
+  		window.location = "dashboard";
 	}})
+	
 	.catch(err => {
 		console.error(err);
 	});
@@ -67,7 +76,7 @@ render(){
 				
 				<form className="login100-form validate-form">
 					<span className="login100-form-title">
-					 Login
+					 Login {sessionStorage.getItem("userid")}
 					   </span>
 
 					<div className="wrap-input100 validate-input" data-validate = "Valid email is required: username is required">

@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './logo.svg';
 import Home from './pages/home';
+import TopNav from './Sections/TopNav';
 import Profileandskills from './pages/profileandskills';
 import Educationandlang from './pages/educationandlang';
 import Contact from './pages/contactandexp';
@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className="App body">
+      <TopNav/>
      <Home />
      <Profileandskills />
      <Educationandlang />

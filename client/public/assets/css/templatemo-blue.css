@@ -45,10 +45,9 @@ h2 {
 }
 
 .tm-border {    
-  width: inherit;
-  height: auto;
+  height: inherit;
   position: static;
-  margin-top: -25px;
+  margin-left: -16%;
 }
 
 .shadow {

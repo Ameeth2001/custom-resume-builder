@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React from 'react';
+import React,{useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -17,7 +17,6 @@ import EditProfile from './pages/editprofile';
 import Profile from './pages/profile';
 import HomeRoute from './homrRoute';
 
-
 function App() {
   $(document).ready(function(){
 		var ht=$('.skills').height();
@@ -27,6 +26,7 @@ function App() {
 		var ht3=$('.experience').height();
 		$('.contact').height(ht3);
 	});
+ 
   
   return (
     <div className="App">
@@ -38,9 +38,17 @@ function App() {
       <Route path="/resume" element={<Resume />}></Route>
       <Route path="/login" element={<LoginRoute />}></Route>
       <Route path="/signup" element={<SignupRoute />}></Route>
-      <Route path="/dashboard" element={<Dashboard />}></Route>
+      
+      { sessionStorage.getItem("userid") && 
+        <Route path="/dashboard" element={<Dashboard />}></Route>
+                }
+      { sessionStorage.getItem("userid") && 
       <Route path="/editprofile" element={<EditProfile />}></Route>
+}
+      { sessionStorage.getItem("userid") && 
       <Route path="/profile" element={<Profile />}></Route>
+}
+
     </Routes>
     </BrowserRouter>
      

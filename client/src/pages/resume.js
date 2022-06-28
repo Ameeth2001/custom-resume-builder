@@ -28,7 +28,7 @@ export default function Resume (){
                <div className="col-lg-3 p-3">
                    <div className="resume_outer">
                    <div className="resume_image">
-                       <img src="assets/images/img2234.jpg" className="phoim"/>
+                       <img src={sessionStorage.getItem("userImage")} className="phoim" alt="UserImage"/>
                    </div>
                    </div>
                

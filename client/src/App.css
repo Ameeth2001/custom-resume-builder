@@ -326,7 +326,6 @@ Banner Style
   color: #fff !important;
 }
 img {
-  width: 100%;
   overflow: hidden;
 }
 /* White button a banner*/
@@ -639,8 +638,8 @@ left: 0;
   margin-right:12px;
 }
 .user-image-sec{background-color: #0002; padding: 30px;}
-.userImage{border-radius: 50%;height: 100px;width: 100px;overflow: hidden;}
-.sidenav_image{height: inherit;margin-left: 0px;}
+.userImage{border-radius: 50%;height: 100px;width: 100px;overflow: hidden; margin:auto;}
+.sidenav_image{height: inherit;margin-left: -16%;}
 .row2 {
   margin-right: -65px;
   margin-left: 95px;
@@ -747,9 +746,7 @@ nav.horizontal ul li {
 }
 
 /* horizontal menu */
-img {
-  max-width: 100%;
-}
+
 
 /*-- end reset --*/
 

@@ -25,7 +25,7 @@ export default function Home (){
 		<div className="row">
 			<div className="col-md-12 col-sm-12">
 				<div className="profile_image">
-				<img src="assets/images/img2234.jpg" className="img-responsive img-circle tm-border" alt="templatemo easy profile" />
+				<img src={sessionStorage.getItem("userImage")} className="img-responsive img-circle tm-border" alt="templatemo easy profile" />
 
 				</div>
 				<hr />

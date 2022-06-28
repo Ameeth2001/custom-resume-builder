@@ -31,6 +31,11 @@ export default class Profile extends Component{
             .then(res => res.text())
             .then(res=>JSON.parse(res))
             .then(res => this.setState({ apiResponse: res[0]},this.checkEmpty()));
+            axios.post("http://localhost:9000/getuserImage",{id:sessionStorage.getItem("userid")})
+			.then((response)=>{
+			sessionStorage.setItem("userImage",response.data);
+			})
+            .catch(err=>console.log(err));
     }
     submitDetails(){
        
@@ -64,6 +69,8 @@ export default class Profile extends Component{
         .catch(err=>console.log(err));
         axios.post('http://localhost:9000/uploadImage',imgdata,{headers:{'content-type':'multipart/form-data'}})
         .catch(err=>console.log(err));
+
+        
         window.location.reload();
 
 
@@ -132,6 +139,11 @@ export default class Profile extends Component{
                         <div className="col-md-4">
                             <h4>Choose Profile Pic</h4>
                         <input type ='file' id = "profile_image" onChange={this.imageChange} accept="images/*" />
+                        {!this.state.selectedImage &&
+                        <img src={sessionStorage.getItem("userImage")}
+                                        className='image'
+                                        alt="Thumb"/>
+                        }
                             {this.state.selectedImage && (
                                     <div className="preview">
                                         
