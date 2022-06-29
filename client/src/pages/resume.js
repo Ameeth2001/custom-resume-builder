@@ -7,12 +7,29 @@ import EducationResume from "./downloadPages/educationresume";
 import PersonalResume from "./downloadPages/personaldetails";
 import Skillresume from "./downloadPages/skillsresume";
 import SideNav from "../Sections/SideNavbar";
+import {jsPDF} from "jspdf"
+import html2canvas from 'html2canvas';
 export default function Resume (){
+    const pdfDownload = e => {
+        e.preventDefault()
+        const input = document.getElementById('pdf-download');
+    html2canvas(input,{
+        scale:0.8,
+        dpi: 1200,
+      })
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'JPEG', 0, 0);
+        // pdf.output('dataurlnewwindow');
+        pdf.save("download.pdf");
+      })
+    }
     return(
         <>
         <SideNav/>
         <div className="download_resume">
-        <div className="sheet">
+        <div id="pdf-download" className="sheet">
    
    <section>
        <div className="resumeprofile navh">
@@ -90,7 +107,7 @@ export default function Resume (){
 
         
 </div>
-
+<a onClick={pdfDownload}>Download as PDF</a>
 
         </div>
  
