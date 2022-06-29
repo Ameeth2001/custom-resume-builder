@@ -82,14 +82,16 @@ this.setState({show:true},this.checkEmpty);
     render(){
         return(
             <>
+             {sessionStorage.getItem("userid")&&
               <a className="add-button btn-success fa fa-plus" data-lid="-1" data-language=""  variant="primary" onClick={this.showEditModal}>
                             
            </a> 
+    }
            <ul style={{listStyle: 'none'}}>
             {this.state.apiResponse.map((lang)=>{return <>
                 
                 
-						<li>{lang.language} <a className='btn btn-success edit_lng_button fa fa-times'  data-lid={lang.languageid}  variant="primary" onClick={this.deleteLanguage}></a> 
+						<li>{lang.language}  {sessionStorage.getItem("userid")&&<a className='btn btn-success edit_lng_button fa fa-times'  data-lid={lang.languageid}  variant="primary" onClick={this.deleteLanguage}></a> }
 </li>
 						
 					

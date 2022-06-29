@@ -67,9 +67,10 @@ export default class Contactchange extends Component{
             
             
        <>
+        {sessionStorage.getItem("userid")&&
        <Button className="edit-button" variant="primary" onClick={() => this.setState({ show: true },this.checkEmpty)}>
             <i className='fa fa-pencil'></i>
-            </Button> 
+            </Button> }
        
                   <p><i className="fa fa-map-marker"></i >&nbsp;&nbsp;&nbsp; {this.state.apiResponse.address}</p>
                   <p><i className="fa fa-map-marker"></i >&nbsp;&nbsp;&nbsp; {this.state.apiResponse.city}</p>

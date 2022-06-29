@@ -74,15 +74,15 @@ this.setState({show:true},this.checkEmpty);
     render(){
         return(
             <>
-            <a className="Expadd-button btn-success fa fa-plus" data-sid="-1" data-skill="" data-perc="" variant="primary" onClick={this.showEditModal}>
+             {sessionStorage.getItem("userid")&&<a className="Expadd-button btn-success fa fa-plus" data-sid="-1" data-skill="" data-perc="" variant="primary" onClick={this.showEditModal}>
                                </a> 
-            
+    }
             
             {this.state.apiResponse.map((skill)=>{return <>
             <div className='row'>
             <div>
-            <a className='fa fa-pencil edit_skill_btn' data-sid={skill.skillID} data-skill={skill.skillname} data-perc={skill.percent} variant="primary" onClick={this.showEditModal}></a> 
-
+            {sessionStorage.getItem("userid")&&<a className='fa fa-pencil edit_skill_btn' data-sid={skill.skillID} data-skill={skill.skillname} data-perc={skill.percent} variant="primary" onClick={this.showEditModal}></a> 
+            }
             </div>
 
             <div className="w-90">

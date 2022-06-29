@@ -1,7 +1,10 @@
 import React from "react";
+
+
 import $ from 'jquery';
 
 export default function Home (){
+	
 	$(document).ready(function(){
 		var ht=$('.skills').height();
 		$('.about').height(ht);
@@ -29,7 +32,8 @@ export default function Home (){
 
 				</div>
 				<hr />
-				<h1 className="tm-title">Hi, I am Saketh</h1>
+				<h4 className="text-white">Hi, I am</h4>
+				<h1 className="tm-title text-dark">{sessionStorage.getItem("firstname")} {sessionStorage.getItem("lastname")}</h1>
 				<h1 className="white">Student</h1>
 			</div>
 		</div>

@@ -3,7 +3,7 @@
   background-size: cover;
   text-align: center;
 }
-input[type="text"], input[type="email"], input[type="password"] {
+input.form-control[type="text"], input.form-control[type="email"], input.form-control[type="password"] {
   font-size: 15px;
   line-height: 1.5;
   color: #666666;

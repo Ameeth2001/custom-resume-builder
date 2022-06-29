@@ -41,7 +41,7 @@ export default class Home2 extends Component{
             </div>
             <div className="col-lg-6">
               <div className="right-image wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5s" style={{visibility: "visible"}}>
-                <img src="assets/images/slider-dec.png" alt=""/>
+                <img src="assets/images/users.png" alt=""/>
               </div>
             </div>
           </div>
@@ -63,44 +63,40 @@ export default class Home2 extends Component{
     </div>
     <div className="container">
       <div className="row">
-        <div className="col-lg-3">
+        
+      <div className="col-lg-3">
           <div className="service-item first-service">
             <div className="icon"></div>
-            <h4>App Maintenance</h4>
-            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-            <div className="text-button">
-              <a href="#">Read More <i className="fa fa-arrow-right"></i></a>
-            </div>
+            <h4>Step 1</h4>
+            <p>Create an account using the Sign Up page and get your Username and Password.
+            </p>
+          
           </div>
         </div>
+        
         <div className="col-lg-3">
           <div className="service-item second-service">
             <div className="icon"></div>
-            <h4>Rocket Speed of App</h4>
-            <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
-            <div className="text-button">
-              <a href="#">Read More <i className="fa fa-arrow-right"></i></a>
-            </div>
+            <h4>Step 2</h4>
+            <p>Login to view your custom dashboard and sumbit your profile info.</p>
+          
           </div>
         </div>
         <div className="col-lg-3">
           <div className="service-item third-service">
             <div className="icon"></div>
-            <h4>Multi Workflow Idea</h4>
-            <p>If this template is beneficial for your work, please support us <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
-            <div className="text-button">
-              <a href="#">Read More <i className="fa fa-arrow-right"></i></a>
-            </div>
+            <h4>Step 3</h4>
+            <p>Edit the information through the available pre-made template.</p>
+             
+            
           </div>
         </div>
         <div className="col-lg-3">
           <div className="service-item fourth-service">
             <div className="icon"></div>
-            <h4>24/7 Help &amp; Support</h4>
-            <p>Lorem ipsum dolor consectetur adipiscing elit sedder williamsburg photo booth quinoa and fashion axe.</p>
-            <div className="text-button">
-              <a href="#">Read More <i className="fa fa-arrow-right"></i></a>
-            </div>
+            <h4>Step 4 </h4>
+            <p>View your final draft and download it easily in your desired format.</p>
+           
           </div>
         </div>
       </div>
@@ -120,7 +116,7 @@ export default class Home2 extends Component{
             <div className='row'>
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/anand-pic.jpeg"/>
                     </div>
                     
                     <h4>Anand</h4>
@@ -128,7 +124,7 @@ export default class Home2 extends Component{
                 </div>
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/hundi-pic.jpeg"/>
                     </div>
                     
                    <h4>Ameeth</h4>
@@ -136,7 +132,7 @@ export default class Home2 extends Component{
                 </div>
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/nihaal-pic.jpeg"/>
                     </div>
                     
                     <h4>Nihaal</h4>
@@ -144,7 +140,7 @@ export default class Home2 extends Component{
                 </div>
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/sakethA-pic.jpeg"/>
                     </div>
                     
                     <h4>Saketh.A</h4>
@@ -153,7 +149,7 @@ export default class Home2 extends Component{
                 
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/sakethG-pic.jpeg"/>
                     </div>
                     
                     <h4>Saketh.G</h4>
@@ -161,7 +157,7 @@ export default class Home2 extends Component{
                 </div>
                 <div className='card col-md-4'>
                     <div className='card_image'>
-                    <img src="/assets/images/MYPIC.png"/>
+                    <img src="/assets/images/nikhil-pic.jpeg"/>
                     </div>
                     
                     <h4>Nikhil</h4>

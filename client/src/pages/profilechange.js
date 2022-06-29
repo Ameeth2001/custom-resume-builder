@@ -69,9 +69,11 @@ export default class Intro extends Component{
                     <h3 className="accent">{this.state.apiResponse.title}</h3>
                     <h2>{this.state.apiResponse.subtitle}</h2>
                     <p>{this.state.apiResponse.content}</p>
-                   
-           <Button className="edit-langbutton" variant="primary" onClick={() => this.setState({ show: true },this.checkEmpty)}><i className='fa fa-pencil'></i>
-           </Button> 
+             {sessionStorage.getItem("userid")&&
+             <Button className="edit-langbutton" variant="primary" onClick={() => this.setState({ show: true },this.checkEmpty)}><i className='fa fa-pencil'></i>
+             </Button>
+             }      
+            
                 </div>
                 <Modal show={this.state.show} onHide={() => this.setState({ show: false })}>
         <Modal.Header closeButton>

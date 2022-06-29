@@ -80,16 +80,17 @@ this.setState({show:true},this.checkEmpty);
     render(){
         return(
             <>
+             {sessionStorage.getItem("userid")&&
             <a className="add-button btn-success fa fa-plus" data-sid="-1" data-titl="" data-com="" data-fromd="" data-tod="" data-desc=""     variant="primary" onClick={this.showEditModal}>
                                </a> 
-            
+    }
             
             {this.state.apiResponse.map((item)=>{return <>
             <div className='education_card'>
                 <a>
                 <div>
-            <a className='fa fa-pencil edit_skill_btn' data-sid={item.id} data-titl={item.title} data-com={item.company} data-fromd={item.from} data-tod={item.to} data-desc={item.description}  variant="primary" onClick={this.showEditModal}></a> 
-
+                {sessionStorage.getItem("userid")&&<a className='fa fa-pencil edit_skill_btn' data-sid={item.id} data-titl={item.title} data-com={item.company} data-fromd={item.from} data-tod={item.to} data-desc={item.description}  variant="primary" onClick={this.showEditModal}></a> 
+            }
             </div>
 
             <h3>{item.title}</h3>

@@ -71,7 +71,7 @@ render(){
 			</div>
 				<div className="wrap-login100">
 				<div className="login100-pic js-tilt" data-tilt>
-					<img src= "assets/images/CV Builder_vector-file (1).svg" alt='SVG as an image'/>
+					<img src= "assets/images/logo.svg" alt='SVG as an image'/>
 				</div>
 				
 				<form className="login100-form validate-form">

@@ -487,9 +487,13 @@ Services Style
   margin: auto;
 }
 .card_image img{
+  
+    height: inherit;
+    margin-left: -16%;
  height:inherit;
  object-position: center;
 }
+
 .team{
   padding: 60px 0;
 }

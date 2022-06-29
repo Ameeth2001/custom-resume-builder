@@ -40,7 +40,6 @@ router.post('/', function(req, res) {
                      fs.renameSync(file.filepath, join(uploadFolder, fileName));
                      newpath=join(uploadFolder, fileName);
                      newpath = newpath.split("\\").join('/');
-                     console.log(newpath);
                    } catch (error) {
                       console.log(error);
                     }

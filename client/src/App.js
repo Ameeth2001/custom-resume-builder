@@ -35,10 +35,12 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />}></Route>
       <Route path="/home" element={<HomeRoute />}></Route>
-      <Route path="/resume" element={<Resume />}></Route>
       <Route path="/login" element={<LoginRoute />}></Route>
       <Route path="/signup" element={<SignupRoute />}></Route>
       
+      { sessionStorage.getItem("userid") && 
+        <Route path="/resume" element={<Resume />}></Route>
+                }
       { sessionStorage.getItem("userid") && 
         <Route path="/dashboard" element={<Dashboard />}></Route>
                 }
@@ -47,6 +49,18 @@ function App() {
 }
       { sessionStorage.getItem("userid") && 
       <Route path="/profile" element={<Profile />}></Route>
+}
+{ !sessionStorage.getItem("userid") && 
+        <Route path="/resume" element={<LoginRoute />}></Route>
+                }
+      { !sessionStorage.getItem("userid") && 
+        <Route path="/dashboard" element={<LoginRoute />}></Route>
+                }
+      { !sessionStorage.getItem("userid") && 
+      <Route path="/editprofile" element={<LoginRoute />}></Route>
+}
+      { !sessionStorage.getItem("userid") && 
+      <Route path="/profile" element={<LoginRoute />}></Route>
 }
 
     </Routes>
